@@ -18,7 +18,7 @@ export class UsersService {
     const createdUser = await this.userModel.create(createUserDto);
     return {
       email: createdUser.email,
-      _id: createdUser.password,
+      _id: createdUser._id,
     };
   }
 

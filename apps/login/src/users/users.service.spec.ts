@@ -66,19 +66,13 @@ describe('UsersService', () => {
   });
 
   it('should insert a new user', async () => {
-    jest.spyOn(model, 'create').mockImplementationOnce(() =>
-      Promise.resolve({
-        _id: '1',
-        ...mockUsers[0],
-      }),
-    );
+    jest
+      .spyOn(model, 'create')
+      .mockImplementationOnce(() => Promise.resolve(mockUsers[0]));
 
     const newUser = await service.create(mockUsers[0]);
 
-    expect(newUser).toEqual({
-      _id: '1',
-      ...mockUsers[0],
-    });
+    expect(newUser).toEqual(mockUsers[0]);
   });
 
   it('should return an array of users from business service', async () => {

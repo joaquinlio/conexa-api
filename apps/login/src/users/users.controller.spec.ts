@@ -5,7 +5,6 @@ import { UserDto } from './dto/user.dto';
 import { HttpException, HttpStatus, ValidationPipe } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { hashSync } from 'bcryptjs';
-import { GetUsersDto } from './dto/get-users.dto';
 
 describe('UsersController', () => {
   let controller: UsersController;
