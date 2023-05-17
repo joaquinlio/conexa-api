@@ -1,4 +1,4 @@
-# Backend Developer Project
+# Conexa Challenge
 
 This repository contains two separate microservices, "login" and "business," which communicate with each other using Redis. This document provides instructions on how to set up and run both microservices.
 
