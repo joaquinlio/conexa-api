@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/login/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/login/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/login",
+  "projects": {
+    "login": {
+      "type": "application",
+      "root": "apps/login",
+      "entryFile": "main",
+      "sourceRoot": "apps/login/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/login/tsconfig.app.json"
+      }
+    },
+    "business": {
+      "type": "application",
+      "root": "apps/business",
+      "entryFile": "main",
+      "sourceRoot": "apps/business/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/business/tsconfig.app.json"
+      }
+    }
+  }
+}
